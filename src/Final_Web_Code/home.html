@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SOS finder by SOFA</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(function(){
+		$("#header").load("../UI/header.html");
+		$("#footer").load("../UI/footer.html");
+		});
+
+	</script>
+
+</head>
+
+<body>
+
+   	<div id="header"></div>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div style="background-color:#e4e3de; height:100%; width:100%; background-position:center; background-repeat:no-repeat;"></div>
+                <div class="carousel-caption" style="color:black;">
+				<center>
+                    <table>
+                    	 <td>
+                        <h1 style="font-size:65px;"><center>SOS finder</center></h1>
+                    	  <h1 style="font-size:25px;"><center>Find Your IoT Device's vunerability!</center></h1><br></br>
+                    	  <h1 style="font-size:25px;"><center>당신의 IoT 기기의 취약성을 점검해보세요!</center></h1><br></br>
+							<center>
+							<a href="service.html" class="btn btn-default" style="background-color:#4ebdae;">Learn More</a></center>
+                      </td>
+                    </table>
+				</center>
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">
+                 
+                </h2>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color:#e4e3de;">
+                        <h4><i class="fa fa-fw fa-check"></i> SOS finder 란?</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>여러분의 IoT 기기의 펌웨어에 대해 바이너리 코드를 분석 비교하여 보안 상태를 점검하고 해결방안을 권고해드립니다.<br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color:#e4e3de;">
+                        <h4><i class="fa fa-fw fa-gift"></i> SOS finder 사용절차</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>IoT 기기의 실행 파일을 추출 또는 다운로드합니다.<br>
+                        	→ 파일 업로드<br>
+                        	→ 취약한 오픈소스 검색<br>
+                        	→ 해결방안 참조 후 조치</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color:#e4e3de;">
+                        <h4><i class="fa fa-fw fa-compass"></i> 커뮤니티</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>취약점 데이터베이스 커뮤니티를 형성함으로써, 다양한 플랫폼을 대상으로 취약한 펌웨어와 소스코드에 대한 모듈을 보유합니다.<br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">SOS finder의 차별화</h2>
+            </div>
+            <div class="col-md-6">
+                <p><b>'B'사의 'P'제품</b></p>
+                <ul>
+                    <li>'B'사의 'P'제품은 소프트웨어 속 오픈소스를 탐지하는 서비스를 제공하고 있습니다. 하지만 취약점 탐지가 아닌 라이선스에 관한 법적 문제를 해결하는 데에 중점을 두고 있습니다.</li>
+                </ul>
+                <p><b>'K'대 'I'서비스</b></p>
+                <ul>
+                	 <li>'K'대 'I'서비스는 바이너리 기반이 아닌 소스 코드를 분석해 IoT 기기의 취약점 검사를 진행 하긴 하나, 사용자 입장에서 소스코드를 인지하지 못하는 경우가 대다이며, 
+                	 	소프트웨어를 구성하는 소스코드를 구하는 것은 쉽지 않은 일입니다.</li>
+                </ul>
+                <p><b>SOS finder의 차별화</b></p>
+                <ul>
+                	 <li>SOS finder는 IoT기기의 펌웨어를 이용하는 보안 기관 같은 곳이나, 파워유저를 중심 대상으로 서비스를 시작합니다. 더 나아가
+                	 	일반 사용자들 대상으로는 매뉴얼을 제공하여 누구나 쉽게 자신의 기기를 점검 하고 취약한 정도를 대시 보드를 통해 가시화 하여 보여줍니다.
+                	 	그리하여 자신의 기기에 맞는 펌웨어를 업데이트 하는 등 적절한 조치를 취할 수 있도록 권고합니다.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="img/blackduck.png" alt="">
+                <img class="img-responsive" src="img/iotcube.png" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; SOFA 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
