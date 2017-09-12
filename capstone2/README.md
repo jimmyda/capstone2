@@ -1,2 +1,0 @@
-# SOSfinder
-capstone design
