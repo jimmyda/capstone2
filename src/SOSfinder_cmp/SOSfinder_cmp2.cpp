@@ -99,6 +99,7 @@ int TargetTokenize(std::fstream& fsTarget, std::string& szTargetString)
 		}
 		szTargetString += "\n";
 	}
+	fsTarget.close();
 	return D_SUCC;
 }
 
