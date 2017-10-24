@@ -22,3 +22,6 @@ typedef struct stSignature {
 	std::string szSignature;
 }stSig;
 
+char instruct[44][10] = { "mov", "add", "mul", "div", "cbw", "cwd", "inc", "dec", "adc", "sub", "sbb", "imul", "idiv", "push",
+"pop", "and", "or", "xor", "not", "neg", "shl", "ror", "cmp", "jmp", "call", "ret","je", "jz", "jl", "jnge", "jbe", "jna", "jb", "jnae",
+"jp", "jpe", "jo", "js", "loop", "str", "ldr", "blx", "bl", "b." };
