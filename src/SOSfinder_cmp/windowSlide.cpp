@@ -7,7 +7,7 @@ double CmpSigTarget(stSignature stSign, std::string szTargetStr, int iWinSize);
 int GetSignature(MYSQL_ROW row, stSig &stSign);
 int GetSimilarity(std::string &szTargetStr, int iWindowSize);
 int InsertSignature(std::string szFileName);
-double windowSlide(int iFront, int iLast, std::string szTargetStr, stSignature stSigh, int LenOfwin, int iWindowSize, int i);
+double windowSlide(int iFront, int iLast, std::string szTargetStr, stSignature stSign, int LenOfwin, int iWindowSize, int i);
 
 
 int main(int argc, char* argv[]) {
