@@ -5,7 +5,7 @@ session_start();
 
 // 2. 사용자 정의 함수 include
 include ("./lib.php");
-include ("../UI/header.html");
+include ("./header.html");
 // 3. DB 연결
 $connect = sql_connect($db_host, $db_user, $db_pass, $db_name);
 
