@@ -4,9 +4,9 @@
 // 2. 사용자 정의 함수 include
 
 include ("./include.php");
-include ("../UI/board_userinfo_top.html");
+include ("./board_userinfo_top.html");
 
-$sql = "select * from user_info where m_id = '".$_SESSION['user_id']."'";
+$sql = "select m_id, m_name from user_info where m_id = '".$_SESSION['user_id']."'";
 $result = sql_query($sql);
 $data = mysqli_fetch_array($result);
 $finder = "1";
@@ -35,12 +35,14 @@ if((isset($_SESSION['user_id']))==false){
         <td align="center" valign="middle" style="width:200px;background-color:#696f75;color:#ffffff;">이름</td>
         <td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['m_name']?></td>
     </tr>
+    <!--
     <tr>
         <td align="center" valign="middle" style="width:200px;background-color:#696f75;color:#ffffff">Good 게시물 갯수</td>
 		<td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['goodboard']?></td>
 		
 		<small>* Good 게시물이란 커뮤니티 게시판에 올린 사용자의 글 중 관리자가 선택한 게시물을 의미합니다.</small>
  	</tr>
+    -->
 
 </table>
 <br></br>
@@ -52,7 +54,7 @@ if((isset($_SESSION['user_id']))==false){
 
 <?
 
-include ("../UI/footer.html");
+include ("./footer.html");
 
 ?>
 
