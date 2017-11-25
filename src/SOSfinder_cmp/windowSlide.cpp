@@ -249,6 +249,7 @@ double windowSlide(int iFront, int iLast, std::string szTargetStr, stSignature s
 			dResultJaccard = CmpSigTarget(stSign, szTargetStr.substr(iStart, iCompLen), iWindowSize);
 			break;
 		}
+		str = "";
 	}
 	return dResultJaccard;
 
