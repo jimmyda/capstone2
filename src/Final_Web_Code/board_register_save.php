@@ -55,7 +55,7 @@ if($_POST['m_pass'] != $_POST['m_pass2']){
 }
 
 // 4. 같은 아이디가 있는지 검사
-$chk_sql = "select m_idx from user_info where m_id = '".trim($_POST['m_id'])."'";
+$chk_sql = "select * from user_info where m_id = '".trim($_POST['m_id'])."'";
 $chk_result = sql_query($chk_sql);
 $chk_data = mysqli_fetch_array($chk_result);
 
@@ -66,7 +66,7 @@ if($chk_data['m_idx']){
         alert("이미 가입된 아이디 입니다.");
         history.back();
     </script>
-    <? 
+    <?
     exit;
 }
 

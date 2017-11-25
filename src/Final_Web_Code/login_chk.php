@@ -7,7 +7,7 @@ include ("./include.php");
 if(isset($_SESSION['user_id'])){
     ?>
     <script>
-        alert("로그인 하신 상태입니다.");
+        alert("로그인 하신 상태입니다 check");
         history.back();
     </script>
     <?
@@ -35,7 +35,7 @@ if($_POST['m_pass'] == ""){
 }
 
 // 4. 같은 아이디가 있는지 검사
-$chk_sql = "select m_idx, m_id, m_name, m_pass from user_info where m_id = '".trim($_POST['m_id'])."'";
+$chk_sql = "select * from user_info where m_id = '".trim($_POST['m_id'])."'";
 $chk_result = sql_query($chk_sql);
 $chk_data = mysqli_fetch_array($chk_result);
 
@@ -52,7 +52,7 @@ if($chk_data['m_idx']){
         ?>
         <script>
         alert("환영합니다.");
-        location.replace("./home.html");
+        location.replace("../UI/home.html");
         </script>
         <?
         exit;
@@ -61,7 +61,6 @@ if($chk_data['m_idx']){
         ?>
         <script>
             alert("비밀번호가 다릅니다.");
-            
             history.back();
         </script>
         <?

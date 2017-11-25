@@ -14,7 +14,7 @@ if((isset($_SESSION['user_id']))==false){
 }
 
 // 3. 글 데이터 불러오기
-$sql = "select b_idx, m_id, b_num, b_reply from board where b_idx = '".$_GET['b_idx']."'";
+$sql = "select * from board where b_idx = '".$_GET['b_idx']."'";
 $result = sql_query($sql);
 $data = mysqli_fetch_array($result);
 

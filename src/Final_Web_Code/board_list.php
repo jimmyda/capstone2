@@ -2,7 +2,7 @@
 //board_list.php : 게시판의 글 목록을 출력한다.
 // 1. 공통 인클루드 파일 
 include ("./include.php");
-include ("./board_list_top.html");
+include ("../UI/board_list_top.html");
 
 $admin = "SOFA";
 ?>
@@ -43,7 +43,7 @@ $paging_str = paging($page, $page_row, $page_scale, $total_count);
 $from_record = ($page - 1) * $page_row;
 
 // 6. 글목록 구하기
-$query = "select b_idx, b_num, b_reply, b_title, b_regdate, m_name from board where 1 order by b_num desc, b_reply asc limit ".$from_record.", ".$page_row;
+$query = "select * from board where 1 order by b_num desc, b_reply asc limit ".$from_record.", ".$page_row;
 $result = $connect->query($query);
 
 // 7.데이터 갯수 체크를 위한 변수 설정
@@ -105,7 +105,7 @@ if($i == 0){
 
 <?
 
-include ("./footer.html");
+include ("../UI/footer.html");
 
 ?>
 
