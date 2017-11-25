@@ -33,7 +33,7 @@ if(isset($_SESSION['user_id'])){
 <br></br>
 <br></br>
 <br/>
-<body style="background-image:url('77.png'); background-size:contain; background-repeat:no-repeat; background-color:black; background-position:center center;">
+<body style="background-image:url('img/space.jpg'); background-size:contain; background-repeat:no-repeat; background-color:black; background-position:center center;">
 <center>
 
 <table style="width:320px;height:50px;border:5px #000000 solid;border-radius:5px; table-layout:fixed">
