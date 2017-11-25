@@ -14,7 +14,7 @@ if((isset($_SESSION['user_id']))==false){
 }
 
 // 3. 부모글 데이터 불러오기
-$sql = "select * from board where b_idx = '".$_POST['b_idx']."'";
+$sql = "select b_idx, m_id, b_reply from board where b_idx = '".$_POST['b_idx']."'";
 $result = sql_query($sql);
 $data = mysqli_fetch_array($result);
 
@@ -51,7 +51,7 @@ if(strlen($data['b_reply']) == 2){
 
 // 6-2 부모글에 달린 댓글의 마지막 댓글이 몇번째인지 검사
 
-$sql2 = "select * from board where b_num = '".$data['b_num']."' and b_reply like '".$data['b_reply']."%' order by b_reply desc limit 1";
+$sql2 = "select b_num, b_reply, b_title, b_contents from board where b_num = '".$data['b_num']."' and b_reply like '".$data['b_reply']."%' order by b_reply desc limit 1";
 $result2 = sql_query($sql2);
 $data2 = mysqli_fetch_array($result2);
 

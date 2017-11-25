@@ -45,7 +45,7 @@ if(trim($_POST[b_contents]) == ""){
 }
 
 // 4. 수정할 글 데이터 불러오기
-$sql = "select * from board where b_idx = '".$_POST[b_idx]."'";
+$sql = "select b_idx, m_id from board where b_idx = '".$_POST[b_idx]."'";
 $result = sql_query($sql);
 $data = mysqli_fetch_array($result);
 
