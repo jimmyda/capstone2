@@ -5,14 +5,14 @@
 // 1. DB 관련 변수 정리
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "1234";
-$db_name = "sosfinder";
+$db_pass = "root";
+$db_name = "SOFA";
 
-// 2. DB 접속 및 데이터 베이스 선택 사용자 함수(Database - SOSfinder)
+// 2. DB 접속 및 데이터 베이스 선택 사용자 함수(Database - SOFA)
 function sql_connect($db_host, $db_user, $db_pass, $db_name)
 {
     $result = mysqli_connect($db_host, $db_user, $db_pass) or die(mysqli_error());
-    mysqli_select_db($result,"sosfinder") or die(mysqli_error($result));
+    mysqli_select_db($result,"SOFA") or die(mysqli_error($result));
     return $result;
 }
 
@@ -20,7 +20,7 @@ function sql_connect($db_host, $db_user, $db_pass, $db_name)
 // 쿼리 함수
 function sql_query($sql)
 {
-    global $connect;
+    global $connect; 
     $result = $connect->query($sql) or die("<p>$sql<p>" . mysqli_errno($connect) . " : " .  mysqli_error($connect) . "<p>error file : $_SERVER[PHP_SELF]");
     return $result;
 }
@@ -41,7 +41,7 @@ function paging($page, $page_row, $page_scale, $total_count, $ext = '')
     // 4-1. 전체 페이지 계산
     $total_page  = ceil($total_count / $page_row);
 
-    // 4-2. 페이징을 출력할 변수 초기화
+    // 4-2. 페이징을 출력할 변수 초기화           
     $paging_str = "";
 
     // 4-3. 처음 페이지 링크 만들기
