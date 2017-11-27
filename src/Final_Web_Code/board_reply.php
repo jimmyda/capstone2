@@ -59,9 +59,11 @@ if(substr($data2['b_reply'], strlen($data['b_reply']), 1) == "Z"){
 ?>
 <center>
 <br/>
-<table style="width:1000px;height:50px;border:5px #34373a solid;">
+<link href="css/board.css" rel="stylesheet">
+
+    <table class="table" style="border:5px #34373a solid;">
     <tr>
-        <td align="center" valign="middle" style="font-zise:15px;color:#696f75;font-weight:bold;">취약점 Software 댓글 쓰기</td>
+        <td align="center" valign="middle" class="title">취약점 Software 댓글 쓰기</td>
     </tr>
 </table>
 <br/>
@@ -69,13 +71,13 @@ if(substr($data2['b_reply'], strlen($data['b_reply']), 1) == "Z"){
 <input type="hidden" name="b_idx" value="<?=$data['b_idx']?>">
 <table style="width:1000px;height:50px;border:0px;">
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">글제목</td>
-        <td align="left" valign="middle" style="width:800px;height:50px;"><input type="text" name="b_title" style="width:780px;" value=""></td>
+        <td align="center" valign="middle" class="title_table">글제목</td>
+        <td align="left" valign="middle" class="write_content_table" style="height:50px;"><input type="text" name="b_title" style="width:780px;" value=""></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:200px;background-color:#696f75;color:#ffffff;">글내용</td>
-        <td align="left" valign="middle" style="width:800px;height:200px;">
-        <textarea name="b_contents" style="width:800px;height:200px;"></textarea>
+        <td align="center" valign="middle" class="title_table">글내용</td>
+        <td align="left" valign="middle" class="write_content_table">
+        <textarea name="b_contents" class="write_content_table"></textarea>
         </td>
     </tr>
     <!-- 4. 글쓰기 버튼 클릭시 입력필드 검사 함수 write_save 실행 -->
@@ -83,6 +85,7 @@ if(substr($data2['b_reply'], strlen($data['b_reply']), 1) == "Z"){
         <td align="center" valign="middle" colspan="2"><input type="button" value=" 댓글쓰기 " onClick="write_save();">&nbsp;&nbsp;&nbsp;<input type="button" value=" 뒤로가기 " onClick="history.back();"></td>
     </tr>
 </table>
+    
 </form>
 </center>
 <script>
