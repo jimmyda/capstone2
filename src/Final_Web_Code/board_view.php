@@ -20,33 +20,37 @@ if(!$data['b_idx']){
 }
 // 4. 출력 HTML 출력
 ?>
+
+<link href="css/board.css" rel="stylesheet">
+
+
 <center>
 <br/>
 <table style="width:500px;height:50px;border:5px #000000 solid;border-radius:5px;">
     <tr>
-        <td align="center" valign="middle" style="font-size:25px;font-weight:bold;">글 보기</td>
+        <td align="center" valign="middle" class="title">글 보기</td>
     </tr>
 </table>
 <br/>
-<table cellspacing="1" style="width:1000px;height:50px;border:0px;background-color:#999999;">
+<table cellspacing="1" class="table" style="background-color:#999999;">
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">글제목</td>
-        <td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['b_title']?></td>
+        <td align="center" valign="middle" class="title_table">글제목</td>
+        <td align="left" valign="middle" class="content_table"><?=$data['b_title']?></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">작성자</td>
-        <td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['m_name']?></td>
+        <td align="center" valign="middle" class="title_table">작성자</td>
+        <td align="left" valign="middle" class="content_table"><?=$data['m_name']?></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">작성일</td>
-        <td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=substr($data['b_regdate'],0,10)?></td>
+        <td align="center" valign="middle" class="title_table">작성일</td>
+        <td align="left" valign="middle" class="content_table"><?=substr($data['b_regdate'],0,10)?></td>
     </tr>
     <tr> 
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">글내용</td>
-        <td align="left" valign="top" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=nl2Br($data['b_contents'])?></td>
+        <td align="center" valign="middle" class="title_table">글내용</td>
+        <td align="left" valign="top" class="content_table"><?=nl2Br($data['b_contents'])?></td>
     </tr>
      <tr> 
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">첨부파일</td>
+        <td align="center" valign="middle" class="title_table">첨부파일</td>
        <!-- <td align="left" valign="top" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=nl2Br($data['b_file'])?></td>-->
     </tr>
     
@@ -57,22 +61,23 @@ if(!$data['b_idx']){
 <table style="width:1000px;height:50px;">
     <tr>
         <td align="center" valign="middle">
-        <input type="button" value=" 목록 " style="background-color:#0FC59B; color:#fff" onClick="location.href='./board_list.php?page=<?=$_GET['page']?>';">
+        <input type="button" value=" 목록 " class="button_basic" onClick="location.href='./board_list.php?page=<?=$_GET['page']?>';">
         <?// 5. 로그인 한 경우면 글쓰기,댓글쓰기 버튼 보여주기?>
         <?if(isset($_SESSION['user_id'])){?>
-        &nbsp;&nbsp;<input type="button" value=" 글쓰기 " style="background-color:#0FC59B; color:#fff" onClick="location.href='./board_write.php';">
-        &nbsp;&nbsp;<input type="button" value=" 댓글쓰기 " style="background-color:#0FC59B; color:#fff" onClick="location.href='./board_reply.php?b_idx=<?=$data['b_idx']?>';">
+        &nbsp;&nbsp;<input type="button" value=" 글쓰기 " class="button_basic" onClick="location.href='./board_write.php';">
+        &nbsp;&nbsp;<input type="button" value=" 댓글쓰기 " class="button_basic" onClick="location.href='./board_reply.php?b_idx=<?=$data['b_idx']?>';">
         <?}?>
         <?// 6. 자신의 글일 경우, 삭제하기 버튼 보여주기?>
         <?if($_SESSION['user_id'] == $data['m_id']){?>
-        &nbsp;&nbsp;<input type="button" value=" 삭제하기 " style="background-color:#0FC59B; color:#fff" onClick="board_delete('<?=$data['b_idx']?>');">
+        &nbsp;&nbsp;<input type="button" value=" 삭제하기 " class="button_basic" onClick="board_delete('<?=$data['b_idx']?>');">
         <?}?>
 		<?if($_SESSION['user_id'] == $admin){?>
-        &nbsp;&nbsp;<input type="button" value=" 관리자:데이터베이스에 저장 " style="background-color:#0FC59B; color:#fff" onClick="board_admin('<?=$data['b_idx']?>');">
+        &nbsp;&nbsp;<input type="button" value=" 관리자:데이터베이스에 저장 " class="button_basic" onClick="board_admin('<?=$data['b_idx']?>');">
         <?}?>
         </td>
     </tr>
 </table>
+	
 <script>
 function board_delete(b_idx)
 {
