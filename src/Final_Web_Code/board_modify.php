@@ -41,23 +41,26 @@ if($data[m_id] != $_SESSION[user_id]){
 // 5. 입력 HTML 출력
 ?>
 <br/>
-<table style="width:1000px;height:50px;border:5px #CCCCCC solid;">
+
+<link href="css/board.css" rel="stylesheet">
+
+<table class="table" style="border:5px #CCCCCC solid;">
     <tr>
-        <td align="center" valign="middle" style="font-zise:15px;font-weight:bold;">글 수정</td>
+        <td align="center" valign="middle" class="title">글 수정</td>
     </tr>
 </table>
 <br/>
 <form name="bWriteForm" method="post" action="./board_modify_save.php" style="margin:0px;">
 <input type="hidden" name="b_idx" value="<?=$data[b_idx]?>">
-<table style="width:1000px;height:50px;border:0px;">
+<table class="table">
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;">글제목</td>
-        <td align="left" valign="middle" style="width:800px;height:50px;"><input type="text" name="b_title" style="width:780px;" value="<?=$data[b_title]?>"></td>
+        <td align="center" valign="middle" class="title_table">글제목</td>
+        <td align="left" valign="middle" class="write_content_table" style=" height:50px;"><input type="text" name="b_title" style="width:780px;" value="<?=$data[b_title]?>"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:200px;background-color:#CCCCCC;">글내용</td>
-        <td align="left" valign="middle" style="width:800px;height:200px;">
-        <textarea name="b_contents" style="width:800px;height:200px;"><?=$data[b_contents]?></textarea>
+        <td align="center" valign="middle" class="title_table">글내용</td>
+        <td align="left" valign="middle" class="write_content_table">
+        <textarea name="b_contents" class="write_content_table"><?=$data[b_contents]?></textarea>
         </td>
     </tr>
     <!-- 4. 글쓰기 버튼 클릭시 입력필드 검사 함수 write_save 실행 -->
