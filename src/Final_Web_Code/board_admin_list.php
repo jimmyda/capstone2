@@ -7,18 +7,20 @@ $admin = "SOFA";
 <center>
 
 <br/>
+<link href="css/board.css" rel="stylesheet">
+
 <table style="width:500px;height:50px;border:5px #000000 solid;border-radius:5px;">
     <tr>
-        <td align="center" valign="middle" style="font-size:25px;font-weight:bold;">게시판 관리자 페이지</td>
+        <td align="center" valign="middle"class="title">게시판 관리자 페이지</td>
     </tr>
 </table>
 <br/>
-<table cellspacing="1" style="width:1000px;height:50px;border:0px;background-color:#34373a;">
+<table cellspacing="1" class="table" style="background-color:#34373a;">
     <tr>
-        <td align="center" valign="middle" width="5%" style="height:30px;color:#ffffff;background-color:#696f75;">번호</td>
-        <td align="center" valign="middle" width="60%" style="height:30px;color:#ffffff;background-color:#696f75;">글제목</td>
-        <td align="center" valign="middle" width="15%" style="height:30px;color:#ffffff;background-color:#696f75;">글쓴이</td>
-        <td align="center" valign="middle" width="20%" style="height:30px;color:#ffffff;background-color:#696f75;">작성일</td>
+        <td align="center" valign="middle" width="5%" class="title_table"style="height:30px">번호</td>
+        <td align="center" valign="middle" width="60%" class="title_table"style="height:30px">글제목</td>
+        <td align="center" valign="middle" width="15%" class="title_table"style="height:30px">글쓴이</td>
+        <td align="center" valign="middle" width="20%" class="title_table"style="height:30px">작성일</td>
     </tr>
 <?
 
@@ -68,11 +70,11 @@ while($data = mysqli_fetch_array($result)){
     }
 
 ?>
-    <tr>
-        <td align="center" valign="middle" style="height:30px;background-color:#FFFFFF;"><?=($total_count - (($page - 1) * $page_row) - $i )?></td>
-        <td align="center" valign="middle" style="height:30px;background-color:#FFFFFF;"><?=$reply_str?><a href="./board_view.php?b_idx=<?=$data['b_idx']?>&page=<?=$page?>"><?=$data['b_title']?></a></td>
-        <td align="center" valign="middle" style="height:30px;background-color:#FFFFFF;"><?=$data['m_name']?></td>
-        <td align="center" valign="middle" style="height:30px;background-color:#FFFFFF;"><?=substr($data['b_regdate'],0,10)?></td>
+     <tr>
+        <td align="center" valign="middle" class="admin_table"><?=($total_count - (($page - 1) * $page_row) - $i )?></td>
+        <td align="center" valign="middle" class="admin_table"><?=$reply_str?><a href="./board_view.php?b_idx=<?=$data['b_idx']?>&page=<?=$page?>"><?=$data['b_title']?></a></td>
+        <td align="center" valign="middle" class="admin_table"><?=$data['m_name']?></td>
+        <td align="center" valign="middle" class="admin_table"><?=substr($data['b_regdate'],0,10)?></td>
     </tr>
 <?
     // 10.데이터 갯수 체크를 위한 변수를 1 증가시킴
@@ -83,7 +85,7 @@ while($data = mysqli_fetch_array($result)){
 if($i == 0){
 ?>
     <tr>
-        <td align="center" valign="middle" colspan="4" style="height:50px;background-color:#FFFFFF;">자료가 없습니다.</td>
+        <td align="center" valign="middle" colspan="4" class="admin_table">자료가 없습니다.</td>
     </tr>
 <?
 }
