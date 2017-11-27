@@ -15,10 +15,13 @@ if((isset($_SESSION['user_id']))==false){
 // 3. 입력 HTML 출력
 ?>
 <br/>
+
+<link href="css/board.css" rel="stylesheet">
+
 <center>
 <table style="width:320px;height:50px;border:5px #000000 solid;border-radius:5px;">
     <tr>
-        <td align="center" valign="middle" style="font-size:25px;font-weight:bold;">비밀번호 수정</td>
+        <td align="center" valign="middle" class="title">비밀번호 수정</td>
     </tr>
 </table>
 </center>
@@ -27,12 +30,12 @@ if((isset($_SESSION['user_id']))==false){
 <center>
 <table style="width:720px;height:50px;border:0px;margin-top:15px;">
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;">비밀번호</td>
-        <td  valign="middle" style="width:320px;height:50px;"><input type="password" name="m_pass" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/Qf83FTt.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" class="pw_title">비밀번호</td>
+        <td  valign="middle" style="width:320px;height:50px;"><input type="password" name="m_pass" class="password_input"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;">비밀번호 확인</td>
-        <td  valign="middle" style="width:800px;height:50px;"><input type="password" name="m_pass2" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/Qf83FTt.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" class="pw_title">비밀번호 확인</td>
+        <td  valign="middle" style="width:800px;height:50px;"><input type="password" name="m_pass2" class="password_input" ></td>
     </tr>
     <!-- 4. 정보수정 버튼 클릭시 입력필드 검사 함수 member_save 실행 -->
     <tr>
