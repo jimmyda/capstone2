@@ -33,39 +33,45 @@ if(isset($_SESSION['user_id'])){
 <br></br>
 <br></br>
 <br/>
+
+
+
+<link href="css/board.css" rel="stylesheet">
+
 <body style="background-image:url('77.png'); background-size:contain; background-repeat:no-repeat; background-color:black; background-position:center center;">
 <center>
 
-<table style="width:320px;height:50px;border:5px #000000 solid;border-radius:5px; table-layout:fixed">
+<table class="table_login">
     <tr>
-        <td align="center" valign="middle" style="color:white; font-size:25px; font-weight:bold;">로그인</td>
+        <td align="center" valign="middle" class="title" style="color:white;">로그인</td>
     </tr>
 </table>
 
 <br/>
 <form name="loginForm" method="post" action="./login_chk.php" style="margin:0px; table-layout:fixed">
-<table style="width:360px;height:50px;border:0px; table-layout:fixed">
+<table class="table_login">
     <tr>
-        <td align="center" valign="middle" style="width:360px;height:50px;"><input type="text" placeholder="아이디" id="username" name="m_id" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/u0XmBmv.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" style="width:360px;height:50px;"><input type="text" placeholder="아이디" id="username" name="m_id" class="password_input" style="background-image:url('http://i.imgur.com/u0XmBmv.png');"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:360px;height:50px;"><input type="password" placeholder="비밀번호" id="password" name="m_pass" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/Qf83FTt.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" style="width:360px;height:50px;"><input type="password" placeholder="비밀번호" id="password" name="m_pass" class="password_input"></td>
     </tr>
 </table>
     <!-- 4. 로그인 버튼 클릭시 입력필드 검사 함수 login_chk 실행 -->
 <table style="display:inline;">
     <tr>
-        <td valign="middle" colspan="2"><input type="button" value=" 로그인 " onClick="login_chk();" style="float:left; width=100%;height:40px;background: #0FC59B; border-radius: 5px; border: 3px solid #46474a; color: #fff; font-weight: bold; text-transform: uppercase; outline: none;cursor: pointer;"></td>
+        <td valign="middle" colspan="2"><input type="button" value=" 로그인 " onClick="login_chk();" class="button" style="float:left;"></td>
     </tr>
 </table>
 <table style="display:inline;">
 	<tr>
-        <td valign="middle" colspan="2"><input type="button" value=" 회원가입 " onClick="location.href='./board_register.php';" style="float:left; width=100%;height:40px;background: #0FC59B; border-radius: 5px; border: 3px solid #46474a; color: #fff; font-weight: bold; text-transform: uppercase; outline: none;cursor: pointer;"></td>
+        <td valign="middle" colspan="2"><input type="button" value=" 회원가입 " onClick="location.href='./board_register.php';" class="button" style="float:left;"></td>
     </tr>
 </table>
 </form>
 </center>
 </body>
+
 
 
 <script>
