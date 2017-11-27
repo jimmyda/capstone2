@@ -22,10 +22,12 @@ if(isset($_SESSION['user_id'])){
 // 3. 입력 HTML 출력
 ?>
 <br/>
+<link href="css/board.css" rel="stylesheet">
 <center>
-<table style="width:320px;height:50px;border:5px #000000 solid;border-radius:5px;">
+
+<table class="title_form">
     <tr>
-        <td align="center" valign="middle" style="font-size:25px;font-weight:bold;">회원가입</td>
+        <td align="center" valign="middle" class="title">회원가입</td>
     </tr>
 </table>
 </center>
@@ -34,26 +36,27 @@ if(isset($_SESSION['user_id'])){
 <center>
 <table style="width:720px;height:50px;border:0px;">
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;">아이디</td>
-        <td valign="middle" style="width:320px;height:50px;"><input type="text" name="m_id" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/u0XmBmv.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" class="pw_title">아이디</td>
+        <td valign="middle" style="width:320px;height:50px;"><input type="text" name="m_id" class="password_input" style="background-image:url('http://i.imgur.com/u0XmBmv.png');"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;">이름</td>
-        <td  valign="middle" style="width:800px;height:50px;"><input type="text" name="m_name" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/u0XmBmv.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" class="pw_title">이름</td>
+        <td  valign="middle" style="width:800px;height:50px;"><input type="text" name="m_name" class="password_input" style="background-image:url('http://i.imgur.com/u0XmBmv.png');"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;">비밀번호</td>
-        <td  valign="middle" style="width:800px;height:50px;"><input type="password" name="m_pass" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/Qf83FTt.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" class="pw_title">비밀번호</td>
+        <td  valign="middle" style="width:800px;height:50px;"><input type="password" name="m_pass" class="password_input"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;">비밀번호 확인</td>
-        <td valign="middle" style="width:800px;height:50px;"><input type="password" name="m_pass2" style="width:320px;height:40px;border:1px #ccc solid; border-radius:5px; background-image:url('http://i.imgur.com/Qf83FTt.png'); background-repeat:no-repeat; background-size:16px 80px; outline: none; padding: 0 20px 0 25px;"></td>
+        <td align="center" valign="middle" class="pw_title">비밀번호 확인</td>
+        <td valign="middle" style="width:800px;height:50px;"><input type="password" name="m_pass2" class="password_input"></td>
     </tr>
     <!-- 4. 회원가입 버튼 클릭시 입력필드 검사 함수 member_save 실행 -->
     <tr>
-        <td valign="middle" colspan="2"><input type="button" value=" 회원가입 " onClick="member_save();" style="width=100%;height:40px;background: #0FC59B; border-radius: 5px; border: #46474a; color: #fff; font-weight: bold; text-transform: uppercase; outline: none;cursor: pointer; margin-left:190px; margin-top:15px;"></td>
+        <td valign="middle" colspan="2"><input type="button" value=" 회원가입 " onClick="member_save();" class="button" style="margin-left:190px; margin-top:15px;"></td>
     </tr>
 </table>
+    
 </center>
 </form>
 <script>
