@@ -1,0 +1,41 @@
+
+.title_table{
+    width:200px;background-color:#696f75;color:#ffffff;
+}
+
+.content_table{
+    width:800px;background-color:#FFFFFF;padding:5px;
+}
+
+.button
+{
+    height:40px;background: #0FC59B; border-radius: 5px; border: #46474a; color: #fff;
+    font-weight: bold;
+    text-transform: uppercase; outline: none;cursor: pointer;
+}
+.button_basic{background-color:#0FC59B; color:#fff;}
+
+
+.title{font-size:25px;font-weight:bold;}
+
+
+.title_form{width:320px;height:50px;border:5px #000000 solid;border-radius:5px;}
+
+.table{
+    width:1000px;height:50px;border:0px;
+}
+.write_content_table{
+    width:800px;height:200px;
+}
+
+.pw_title{
+
+    width:200px;height:50px;background-color:#CCCCCC;border-radius:5px;
+}
+.password_input{width:320px;height:40px;border:1px #ccc solid;
+    border-radius:5px; background-image:url('http://i.imgur.com/Qf83FTt.png'); background-repeat:no-repeat;
+    background-size:16px 80px; outline: none; padding: 0 20px 0 25px;}
+
+.admin_table{
+    height:30px;background-color:#FFFFFF;
+}
