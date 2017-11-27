@@ -15,28 +15,31 @@ if((isset($_SESSION['user_id']))==false){
 // 3. 입력 HTML 출력
 ?>
 <center>
-<br/>
+<br/> 
+<link href="css/board.css" rel="stylesheet">
+
+
 <table style="width:500px;height:50px;border:5px #000000 solid;border-radius:5px;">
     <tr>
-        <td align="center" valign="middle" style="font-size:25px;font-weight:bold;">취약점 소프트웨어 건의하기</td>
+        <td align="center" valign="middle" class="title ">취약점 소프트웨어 건의하기</td>
     </tr>
 </table>
 <br/>
 <form name="bWriteForm" method="post" action="./board_write_save.php" style="margin:0px;">
-<table style="width:1000px;height:50px;border:0px;">
+<table class="table">
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">글제목</td>
-        <td align="left" valign="middle" style="width:800px;height:50px;"><input type="text" name="b_title" style="width:780px;"></td>
+        <td align="center" valign="middle" class="title_table">글제목</td>
+        <td align="left" valign="middle" class="write_content_table" style="height:50px;"><input type="text" name="b_title" style="width:780px;"></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;height:200px;background-color:#696f75;color:#ffffff;">글내용</td>
-        <td align="left" valign="middle" style="width:800px;height:200px;">
-        <textarea name="b_contents" style="width:800px;height:200px;"></textarea>
+        <td align="center" valign="middle" class="title_table">글내용</td>
+        <td align="left" valign="middle" class="write_content_table" >
+        <textarea name="b_contents" class="write_content_table" ></textarea>
         </td>
     </tr>
 	<tr>
-        <td align="center" valign="middle" style="width:200px;height:50px;background-color:#696f75;color:#ffffff;">FILE</td>
-        <td align="left" valign="middle" style="width:800px;height:50px;"><input type="file" name="업로드" id="fileUpload">
+        <td align="center" valign="middle" class="title_table">FILE</td>
+        <td align="left" valign="middle" class="write_content_table" style="height:50px;"><input type="file" name="업로드" id="fileUpload">
 		<!--<input type="submit" value="Upload" name="submit">-->
 	</td>
     </tr>
@@ -44,10 +47,9 @@ if((isset($_SESSION['user_id']))==false){
 
     <!-- 4. 글쓰기 버튼 클릭시 입력필드 검사 함수 write_save 실행 -->
     <tr>
-        <td align="center" valign="middle" colspan="2"><input type="button" value=" 글쓰기 " onClick="write_save();"></td>
+        <td align="center" valign="middle" colspan="2"><input type="button" class="button_basic" value=" 글쓰기 " onClick="write_save();"></td>
     </tr>
 </table>
-</form>
 </center>
 
 
