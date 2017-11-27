@@ -24,20 +24,23 @@ if((isset($_SESSION['user_id']))==false){
 }
 // 3. 입력 HTML 출력
 ?>
+
+<link href="css/board.css" rel="stylesheet"> //클래스화 한 css파일 링크
+
 <center>
 
 <table cellspacing="1" align="center" style="width:500px;height:100px;border:0px;background-color:#999999;">
 	<tr>
-        <td align="center" valign="middle" style="width:200px;background-color:#696f75;color:#ffffff;">아이디</td>
-        <td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['m_id']?></td>
+        <td align="center" valign="middle" class="title_table">아이디</td>
+        <td align="left" valign="middle" class="content_table"><?=$data['m_id']?></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;background-color:#696f75;color:#ffffff;">이름</td>
-        <td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['m_name']?></td>
+        <td align="center" valign="middle" class="title_table">이름</td>
+        <td align="left" valign="middle" class="content_table"><?=$data['m_name']?></td>
     </tr>
     <tr>
-        <td align="center" valign="middle" style="width:200px;background-color:#696f75;color:#ffffff">Good 게시물 갯수</td>
-		<td align="left" valign="middle" style="width:800px;background-color:#FFFFFF;padding:5px;"><?=$data['goodboard']?></td>
+        <td align="center" valign="middle" class="title_table">Good 게시물 갯수</td>
+		<td align="left" valign="middle" class="content_table"><?=$data['goodboard']?></td>
 		
 		<small>* Good 게시물이란 커뮤니티 게시판에 올린 사용자의 글 중 관리자가 선택한 게시물을 의미합니다.</small>
  	</tr>
@@ -45,11 +48,10 @@ if((isset($_SESSION['user_id']))==false){
 </table>
 <br></br>
 
-	<input type="button" value = " Modify Password " style="width=100%;height:40px;background: #0FC59B; border-radius: 5px; border: #46474a; color: #fff; font-weight: bold; text-transform: uppercase; outline: none;cursor: pointer;" onClick="location.href='./board_member_modify.php';">
-	<input type="button" value = " Logout " style="width=100%;height:40px;background: #0FC59B; border-radius: 5px; border:#46474a; color: #fff; font-weight: bold; text-transform: uppercase; outline: none;cursor: pointer; margin-left:5px" onClick="location.href='./board_logout.php';">
+	<input type="button" value = " Modify Password " class="button" onClick="location.href='./board_member_modify.php';">
+	<input type="button" value = " Logout "class="button" style="margin-left:5px" onClick="location.href='./board_logout.php';">
 
 </center>
-
 <?
 
 include ("../UI/footer.html");
